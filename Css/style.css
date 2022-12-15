@@ -30,10 +30,8 @@ body{
     margin-left: 0px;
 }
 
-body > p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: justify;
+main article a.externo::after{
+    content: '\00A0\1F517';
 }
 
 header {
@@ -46,7 +44,7 @@ header {
     padding: 40px;
 }
 
-header > h1{
+header h1{
     width: auto;
     font-family: var(--fonte1);
     font-size: 3em;
@@ -57,7 +55,7 @@ header > h1{
     text-shadow: 2px 2px 0px  rgba(0, 0, 0, 0.466);
 }
 
-header > p{
+header  p{
     font-family: var(--fonte0);
     color: white;
     font-size: 1.2em;
@@ -80,19 +78,50 @@ main{
     padding: 20px;
 }
 
-main  article > h1{
+main  article h1{
     width: auto;
-    font-family: var(--fonte1);
+    font-family: var(--fonte2);
     font-weight: normal;
+    font-size: 1.8em;
     margin-top: 0px;
     margin-bottom: 0px;
     color: var(--cor5);
 }
-main  article > h2 {
+main  article h2 {
     width: auto;
     font-family: var(--fonte2);
     font-weight: normal;
-    background-image: linear-gradient(to right, #1ffa737e,#ffffff54);
+    font-size: 1.3em;
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    
+}
+main p{
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a{
+    background-color: var(--cor1);
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+    
 }
 
 main article img{
@@ -101,7 +130,7 @@ main article img{
     display: block;
 }
 
-main  article  .imag{
+main article .imag{
     width: 50%;
 }
 
@@ -112,45 +141,62 @@ nav{
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.466);
 }
 
-nav  a{
+nav a{
     text-decoration: none;
-    color: white;
+    color: var(--cor1);
     font-weight: 400;
     padding: 10px;
     font-weight:bold ;
     border-radius: 5px;
     transition-duration: 0.5s;
+    margin-bottom: 20px;
 }
 
-nav  a:hover{
+nav a:hover{
     background-color: var(--cor2);
     color: var(--cor4);
-}
-
-h4{
-    border-radius: 10px 10px 0px 0px;
-    font-weight: bold;
-    background-color: #02ca4fde;
-    margin-top: 0px;
-    margin-bottom: 0px;
-
-}
-
-footer {
-    background-color: var(--cor5);
-}
-
-
-footer > p{
-    text-align: center;
-    color: white;
 }
 
 .container{
     box-shadow: 2px 2px 8px 1px rgb(0 0 0 / 39%);
     border-radius: 10px;
-    background-color: #00fc61de;
+    background-color: var(--cor1);
     padding: 1px;
+    margin: 10px 0px 0px 0px;
+}
+
+.container > h3{
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    background-color: var(--cor4);
+    margin: -1px -1px;
+    color: white;
+
+}
+.container > ul{
+    list-style: '\2714\00A0';
+    columns: 2;
+    list-style-position: inside;
+}
+
+footer {
+    background-color: var(--cor5);
+    font-size: 0.8em;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
 }
 
 p {
@@ -163,27 +209,20 @@ p {
     margin-bottom: 0px;
 }
 
-ul{
-    list-style: '✔';
-    columns: 2;
-    list-style-position: inside;
-}
+
 
 .video{
     position: relative;
     background-color: var(--cor4);
     height: 0px;
-    padding-bottom: 460px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
+    padding-bottom: 57%;
+    margin: 0px 0px 20px 0px;
 }
 
-.video > iframe{
+.video iframe{
     position: absolute;
     top: 5%;
     left: 5%;
     width: 90%;
     height: 90%;
 }
-
